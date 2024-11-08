@@ -1,0 +1,281 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --backgroud: #c3c0ba;
+    --white: #fff;
+    --one: #c3266f;
+    --two: #743578;
+    --black: #54585d;
+    --process: #a5a5a5;
+}
+
+body {
+    background: var(--backgroud);
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.left-box {
+    width: 20%;
+    height: 100vh;
+    background: linear-gradient(var(--one), var(--two));
+}
+
+.right-box {
+    width: 80%;
+    padding: 20px;
+    background-color: var(--white);
+    height: 100vh;
+    box-shadow: -7px 2px 15px 2px #54585d52;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border: 3px solid var(--white);
+    padding: 7px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.content-box {
+    padding: 0px 60px 0px 60px;
+}
+
+.content-box .nome {
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 1px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.content-box h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 50px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.hr1 {
+    border: none;
+    height: 1px;
+    background: var(--white);
+    margin-top: 3px;
+}
+
+.p1 {
+    font-size: 17px;
+    color: var(--white);
+    letter-spacing: 1px;
+    padding-top: 12px;
+    text-align: center;
+}
+
+.p2 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: var(--white);
+}
+
+#progress {
+    background: var(--process);
+    border-radius: 13px;
+    height: 8px;
+    width: 100%;
+}
+
+#progress::after {
+    content: '';
+    display: block;
+    background: var(--white);
+    width: 90%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+#progress1 {
+    background: var(--process);
+    border-radius: 13px;
+    height: 8px;
+    width: 100%;
+}
+
+#progress1::after {
+    content: '';
+    display: block;
+    background: var(--white);
+    width: 15%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+#progress2 {
+    background: var(--process);
+    border-radius: 13px;
+    height: 8px;
+    width: 100%;
+}
+
+#progress2::after {
+    content: '';
+    display: block;
+    background: var(--white);
+    width: 70%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+.contact-info {
+    padding: 0px 40px 0px 40px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 60px;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+}
+
+.contact-info a {
+    color: var(--white);
+}
+
+.content-box-dois {
+    padding: 60px 60px 0px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    color: var(--two);
+    padding-left: 10px;
+    border-left: 3px solid var(--one);
+}
+
+h3 {
+    padding-top: 10px;
+    padding-bottom: 7px;
+    color: var(--one);
+}
+
+ul li {
+    list-style: square;
+    color: var(--two)
+}
+
+.education-dates {
+    color: var(--process);
+    font-style: italic;
+}
+
+.qualities {
+    padding-bottom: 100px;
+}
+
+@media (max-width: 1024px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left-box, .right-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-box {
+        box-shadow: none;
+    }
+
+    .content-box {
+        padding: 0px 150px 0px 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-box {
+        height: auto;
+        padding: 15px;
+    }
+
+    .right-box {
+        padding: 15px; 
+    }
+
+
+    .content-box {
+        padding: 0px 80px 0px 80px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .content-box-dois {
+        display: block;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .content-box-dois > * {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .left-box {
+        width: 100%;
+        height: auto;
+        padding: 10px; 
+    }
+
+    .right-box {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content-box {
+        padding: 0px 20px 0 20px;
+    }
+
+    .content-box .nome {
+        font-size: 24px; 
+    }
+
+    .content-box h3 {
+        font-size: 18px;
+    }
+
+    .contact-info {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    .job {
+        padding-top: 15px;
+    }
+
+    .voluntary {
+        padding-top: 20px;
+    }
+}
